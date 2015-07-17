@@ -48,51 +48,6 @@ element we can add only to menu.
   |- el 1
 */
 
-//class Element, public Menu {
-//
-//};
-
-/*
- Create different element tipes:
- - Integer
- - Float
- - IpAdress
- - Time
- - DateTime
- - List
-*/
-
-class Menu {
-
-	private:
-		string name;
-		Menu parent;
-		int level = 0;
-		int numMenus = 0;
-		Menu *MenuList[4];
- 
-	public:
-		Menu(char name, Menu parent): name(name), parent(parent) {
-			level += 1;
-		}
-
-		void addCustomElement(string name) {
-			addMenu(name);		
-		}
-
-		Menu addMenu(string name) {
-			if( numMenus >= 4) {
-				return 0;
-			}
-			MenuList[numMenus++] = new Menu(name, this);
-			return this;
-		}
-
-		Menu done() {
-			return parent;
-		}
-};
-
 // DEFINE ARDUINO PINS FOR THE NAVIGATION BUTTONS
 #define UP_BUTTON_PIN       9
 #define DOWN_BUTTON_PIN     10
@@ -135,6 +90,7 @@ int main () {
 		.addDateTime("el5", callback)
 		.addBoolean("el6", selectedBoolean, callback)
 		.addCustomElement("el7", callback)
+		.addIpAddress
 	.done()
 
 	.addCustomElement("el1", callback)

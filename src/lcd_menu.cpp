@@ -1,11 +1,3 @@
-//============================================================================
-// Name        : lcd_menu.cpp
-// Author      : Vladimir
-// Version     :
-// Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
-//============================================================================
-
 #include <iostream>
 #include <vector>
 #include <typeinfo> // string s = typeid(YourClass).name()
@@ -47,8 +39,6 @@ int main() {
 
 	.addChild("child 3")
 	.addChild("child 4");
-
-	//typeid(menu.getMenu().getChildren()).name();
 
 	cout << "sizeof(menu): " << sizeof( menu.getMenu() ) << endl;
 	cout << "sizeof(children): " << sizeof( menu.getMenu().getChildren() ) << endl;
