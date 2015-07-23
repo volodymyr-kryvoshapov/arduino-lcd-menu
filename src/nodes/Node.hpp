@@ -1,11 +1,4 @@
-/*
- * Node.hpp
- *
- *  Created on: Jul 13, 2015
- *      Author: vladimir
- */
-
-#ifndef NODE_HPP_
+ifndef NODE_HPP_
 #define NODE_HPP_
 
 #include <vector>

@@ -1,10 +1,3 @@
-/*
- * MenuManager.hpp
- *
- *  Created on: Jul 13, 2015
- *      Author: vladimir
- */
-
 #ifndef SRC_MENUMANAGER_HPP_
 #define SRC_MENUMANAGER_HPP_
 

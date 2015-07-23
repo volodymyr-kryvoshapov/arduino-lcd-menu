@@ -1,10 +1,3 @@
-/*
- * Node.cpp
- *
- *  Created on: Jul 13, 2015
- *      Author: vladimir
- */
-
 #include "Node.hpp"
 
 Node::Node():name(NULL), parent(NULL) {}

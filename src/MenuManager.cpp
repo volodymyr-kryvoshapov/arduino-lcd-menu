@@ -1,10 +1,3 @@
-/*
- * MenuManager.cpp
- *
- *  Created on: Jul 13, 2015
- *      Author: vladimir
- */
-
 #include "MenuManager.hpp"
 
 MenuManager::MenuManager() {
