@@ -5,7 +5,7 @@
  *      Author: vladimir
  */
 
-#include "CustomElement.hpp"
+#include "../nodes/CustomElement.hpp"
 
 CustomElement::CustomElement() {
 	// TODO Auto-generated constructor stub
