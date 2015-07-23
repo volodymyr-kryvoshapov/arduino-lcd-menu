@@ -1,4 +1,4 @@
-ifndef NODE_HPP_
+#ifndef NODE_HPP_
 #define NODE_HPP_
 
 #include <vector>
