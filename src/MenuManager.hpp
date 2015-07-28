@@ -11,8 +11,8 @@ public:
 	MenuManager();
 	virtual ~MenuManager();
 
-	Node& addMenu(const string& name); // may by renamed to createMenu
-	Node& getMenu();
+	Node& addRootMenu(const string& name); // may by renamed to createMenu
+	Node& getRootMenu();
 	//void navButtons(int,int,int,int,int,int);
 	//void addUsrScreen(callback, 10000);
 };

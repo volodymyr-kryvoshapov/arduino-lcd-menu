@@ -9,11 +9,11 @@ MenuManager::~MenuManager() {
 	// TODO Auto-generated destructor stub
 }
 
-Node& MenuManager::addMenu(const string& name) {
+Node& MenuManager::addRootMenu(const string& name) {
 	rootNode = new Node(name);
 	return *rootNode;
 }
 
-Node& MenuManager::getMenu() {
+Node& MenuManager::getRootMenu() {
 	return *rootNode;
 }

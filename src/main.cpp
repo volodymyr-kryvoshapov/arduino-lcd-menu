@@ -8,7 +8,7 @@ using namespace std;
 MenuManager menu;
 
 int main() {
-	menu.addMenu("root menu")
+	menu.addRootMenu("root menu")
 
 	.addNode("node 1")
 		.addChild("child 1.1")
@@ -39,10 +39,10 @@ int main() {
 	.addChild("child 3")
 	.addChild("child 4");
 
-	cout << "sizeof(menu): " << sizeof( menu.getMenu() ) << endl;
-	cout << "sizeof(children): " << sizeof( menu.getMenu().getChildren() ) << endl;
-	cout << "menuNodeNum: "<< menu.getMenu().getChildrenNum() << endl;
-	cout << "menuNodeNum: "<< menu.getMenu().getChildren()[1]->getChildrenNum() << endl;
+//	cout << "sizeof(menu): " << sizeof( menu.getMenu() ) << endl;
+//	cout << "sizeof(children): " << sizeof( menu.getMenu().getChildren() ) << endl;
+//	cout << "menuNodeNum: "<< menu.getMenu().getChildrenNum() << endl;
+//	cout << "menuNodeNum: "<< menu.getMenu().getChildren()[1]->getChildrenNum() << endl;
 
 	cout << "Hi Man! Welcome to the show!" << endl;
 
