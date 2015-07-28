@@ -1,6 +1,7 @@
 #ifndef NODE_HPP_
 #define NODE_HPP_
 
+#include <memory>
 #include <vector>
 #include <string>
 

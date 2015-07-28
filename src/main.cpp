@@ -1,9 +1,7 @@
 #include <iostream>
-#include <vector>
-#include <typeinfo> // string s = typeid(YourClass).name()
+//#include <vector>
+//#include <typeinfo> // string s = typeid(YourClass).name()
 #include "MenuManager.hpp"
-
-using namespace std;
 
 MenuManager menu;
 
@@ -44,7 +42,7 @@ int main() {
 //	cout << "menuNodeNum: "<< menu.getMenu().getChildrenNum() << endl;
 //	cout << "menuNodeNum: "<< menu.getMenu().getChildren()[1]->getChildrenNum() << endl;
 
-	cout << "Hi Man! Welcome to the show!" << endl;
+	std::cout << "Hi Man! Welcome to the show!" << endl;
 
 	return 0;
 }
