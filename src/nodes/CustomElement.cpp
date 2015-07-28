@@ -16,3 +16,7 @@ CustomElement::~CustomElement() {
 	// TODO Auto-generated destructor stub
 }
 
+
+void CustomElement::draw() {
+
+}

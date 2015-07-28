@@ -1,7 +1,7 @@
 #ifndef SRC_MENUMANAGER_HPP_
 #define SRC_MENUMANAGER_HPP_
 
-#include "nodes/Node.hpp"
+#include "nodes/Menu.hpp"
 
 class MenuManager { // rename to MenuTree || Menu
 private:

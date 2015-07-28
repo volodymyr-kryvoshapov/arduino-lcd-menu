@@ -7,6 +7,7 @@ class CustomElement: public Node {
 public:
 	CustomElement();
 	virtual ~CustomElement();
+	void draw();
 };
 
 #endif /* SRC_NODES_CUSTOMELEMENT_HPP_ */
