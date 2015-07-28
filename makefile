@@ -1,25 +1,12 @@
-all: menu.exe
+CXX = g++
+CXXFLAGS = -std=c++11 -g -Wall
+SOURCES := $(wildcard src/*.cpp src/nodes/*.cpp)
+EXECUTABLE = menu
 
-menu.exe: main.o
-	g++ -g -o menu main.o
+all: $(EXECUTABLE)
 
-main.o:
-	g++ -c -g src/main.cpp
+$(EXECUTABLE): $(SOURCES)
+	$(CXX) $(CXXFLAGS) -o $(EXECUTABLE) $(SOURCES)
 
 clean:
-	rm main2.o menu
-	
-	
-	
-#CXXFLAGS =  -O2 -g -Wall -fmessage-length=0
-#OBJS =      main.cpp
-#LIBS =
-#TARGET =      main.exe
-#
-#$(TARGET):  $(OBJS)
-#    $(CXX) -o $(TARGET) $(OBJS) $(LIBS)
-#    
-#all:    $(TARGET)
-#
-#clean:
-#    rm -f $(OBJS) $(TARGET)
+	rm $(EXECUTABLE)
