@@ -4,6 +4,9 @@
 #include <memory>
 
 class Node {
+protected:
+	const std::string* name;
+
 public:
 	typedef std::shared_ptr<Node> SPtr;
 	virtual ~Node();

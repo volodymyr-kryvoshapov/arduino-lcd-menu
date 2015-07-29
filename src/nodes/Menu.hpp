@@ -10,8 +10,7 @@
 using namespace std;
 
 class Menu: public Node {
-private:
-	const string* name;
+protected:
 	Menu* parent;
 	std::vector<Node*> children;
 
