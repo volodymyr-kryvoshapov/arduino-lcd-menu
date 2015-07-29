@@ -1,10 +1,3 @@
-/*
- * CustomElement.cpp
- *
- *  Created on: Jul 16, 2015
- *      Author: vladimir
- */
-
 #include "CustomElement.hpp"
 
 CustomElement::CustomElement() {

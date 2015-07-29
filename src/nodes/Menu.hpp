@@ -4,14 +4,16 @@
 #include <memory>
 #include <vector>
 #include <string>
+#include "Node.hpp"
+#include "CustomElement.hpp"
 
 using namespace std;
 
 class Menu: public Node {
 private:
 	const string* name;
-	SPtr parent;
-	std::vector<SPtr> children;
+	Menu* parent;
+	std::vector<Node*> children;
 
 public:
 	Menu();

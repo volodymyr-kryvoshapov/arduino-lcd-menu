@@ -10,13 +10,13 @@ void Menu::draw() {
 }
 
 Menu& Menu::addMenu(const string& name) {
-	SPtr menu = SPtr(new Menu(name, *this));
+	Menu* menu = new Menu(name, *this);
     children.push_back(menu);
     return *menu;
 }
 
 Menu& Menu::addCustomElement(const string& name) {
-    children.push_back( SPtr(new CustomElement(name, *this)) );
+    children.push_back( new CustomElement() );
     return *this;
 }
 

@@ -5,15 +5,13 @@
 
 class MenuManager { // rename to MenuTree || Menu
 private:
-	Node* rootNode;
+	Menu* rootMenu;
 
 public:
 	MenuManager();
 	virtual ~MenuManager();
 
-	Node& addRootMenu(const string& name); // may by renamed to createMenu
-	Node& getRootMenu();
-	//void navButtons(int,int,int,int,int,int);
+	Menu& addRootMenu(const string& name); // may by renamed to createMenu
 	//void addUsrScreen(callback, 10000);
 };
 

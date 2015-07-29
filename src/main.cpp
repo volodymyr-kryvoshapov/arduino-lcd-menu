@@ -1,6 +1,4 @@
 #include <iostream>
-//#include <vector>
-//#include <typeinfo> // string s = typeid(YourClass).name()
 #include "MenuManager.hpp"
 
 MenuManager menu;
