@@ -1,8 +1,13 @@
 #include "Menu.hpp"
 
-Menu::Menu():name(NULL), parent(NULL) {}
-Menu::Menu(const string& name):name(&name), parent(NULL) {}
-Menu::Menu(const string& name, Menu& parent):name(&name), parent(&parent) {}
+Menu::Menu(const string& menuName) {
+	name = &menuName;
+	parent = NULL;
+}
+Menu::Menu(const string& menuName, SPtr& sptrParent) {
+	name = &menuName;
+	parent = sptrParent;
+}
 Menu::~Menu() {}
 
 void Menu::draw() {
@@ -10,9 +15,11 @@ void Menu::draw() {
 }
 
 Menu& Menu::addMenu(const string& name) {
-	Menu* menu = new Menu(name, *this);
+	//std::shared_ptr<Menu> that(this);
+
+	SPtr menu(new Menu(name, this));
     children.push_back(menu);
-    return *menu;
+    return menu;
 }
 
 Menu& Menu::addCustomElement(const string& name) {

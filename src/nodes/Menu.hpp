@@ -10,14 +10,12 @@
 using namespace std;
 
 class Menu: public Node {
-protected:
-	Menu* parent;
-	std::vector<Node*> children;
+private:
+	std::vector<SPtr> children;
 
 public:
-	Menu();
 	Menu(const string& name);
-	Menu(const string& name, Menu& parent);
+	Menu(const string& name, SPtr& parent);
 	virtual ~Menu();
 
 	void draw();
