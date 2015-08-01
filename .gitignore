@@ -3,3 +3,4 @@
 .settings/
 /Default/
 menu
+*.o
