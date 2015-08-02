@@ -2,16 +2,17 @@
 #define SRC_MENUMANAGER_HPP_
 
 #include "nodes/Menu.hpp"
+#include <memory>
 
-class MenuManager { // rename to MenuTree || Menu
+class MenuManager {
 private:
-	Menu* rootMenu;
+	std::shared_ptr<Menu> rootMenu; // Menu* rootMenu;
 
 public:
-	MenuManager();
+	MenuManager(const std::string& name);
 	virtual ~MenuManager();
 
-	Menu& addRootMenu(const string& name); // may by renamed to createMenu
+	Menu& getRootMenu();
 	//void addUsrScreen(callback, 10000);
 };
 

@@ -9,13 +9,13 @@
 
 using namespace std;
 
-class Menu: public Node {
+class Menu: public Node, public enable_shared_from_this<Menu> {
 private:
 	std::vector<SPtr> children;
 
 public:
 	Menu(const string& name);
-	Menu(const string& name, SPtr& parent);
+	Menu(const string& name, SPtr parent);
 	virtual ~Menu();
 
 	void draw();

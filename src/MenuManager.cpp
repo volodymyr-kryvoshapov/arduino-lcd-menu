@@ -1,16 +1,12 @@
 #include "MenuManager.hpp"
 
-MenuManager::MenuManager() {
-	// TODO Auto-generated constructor stub
-
+MenuManager::MenuManager(const std::string& name) {
+	std::shared_ptr<Menu> menu(new Menu(name)); // Menu* rootMenu = new Menu(name); //
+	rootMenu = menu;
 }
+MenuManager::~MenuManager() {}
 
-MenuManager::~MenuManager() {
-	// TODO Auto-generated destructor stub
-}
-
-Menu& MenuManager::addRootMenu(const string& name) {
-	rootMenu = new Menu(name);
+Menu& MenuManager::getRootMenu() {
 	return *rootMenu;
 }
 
