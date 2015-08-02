@@ -9,10 +9,10 @@ private:
 	std::shared_ptr<Menu> rootMenu; // Menu* rootMenu;
 
 public:
-	MenuManager(const std::string& name);
+	MenuManager();
 	virtual ~MenuManager();
 
-	Menu& getRootMenu();
+	Menu& addMenu(const string& name);
 	//void addUsrScreen(callback, 10000);
 };
 

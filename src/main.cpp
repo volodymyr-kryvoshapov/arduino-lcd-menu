@@ -1,11 +1,10 @@
 #include <iostream>
 #include "MenuManager.hpp"
 
-MenuManager menu("root menu");
+MenuManager menu;
 
 int main() {
-	menu.getRootMenu()
-
+	menu
 	.addMenu("node 1")
 		.addCustomElement("child 1.1")
 		.addCustomElement("child 1.2")

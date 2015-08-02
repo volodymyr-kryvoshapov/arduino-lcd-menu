@@ -1,13 +1,13 @@
 #include "MenuManager.hpp"
 
-MenuManager::MenuManager(const std::string& name) {
-	std::shared_ptr<Menu> menu(new Menu(name)); // Menu* rootMenu = new Menu(name); //
+MenuManager::MenuManager() {
+	std::shared_ptr<Menu> menu(new Menu("root menu")); // Menu* rootMenu = new Menu(name);
 	rootMenu = menu;
 }
 MenuManager::~MenuManager() {}
 
-Menu& MenuManager::getRootMenu() {
-	return *rootMenu;
+Menu& MenuManager::addMenu(const string& name) {
+	return rootMenu->addMenu(name);
 }
 
 //Menu& MenuManager::getRootMenu() {
