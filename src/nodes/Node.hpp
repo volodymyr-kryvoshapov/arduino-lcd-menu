@@ -6,7 +6,6 @@
 class Node {
 protected:
 	const std::string* name;
-	std::shared_ptr<Node> parent;
 
 public:
 	typedef std::shared_ptr<Node> SPtr;

@@ -4,15 +4,13 @@ Menu::Menu(const string& menuName) {
 	name = &menuName;
 	parent = NULL;
 }
-Menu::Menu(const string& menuName, SPtr sptrParent) {
+Menu::Menu(const string& menuName, std::shared_ptr<Menu> sptrParent) {
 	name = &menuName;
 	parent = sptrParent;
 }
 Menu::~Menu() {}
 
-void Menu::draw() {
-
-}
+void Menu::draw() {}
 
 Menu& Menu::addMenu(const string& name) {
 	std::shared_ptr<Menu> menu(new Menu(name, shared_from_this()));
@@ -26,7 +24,7 @@ Menu& Menu::addCustomElement(const string& name) {
 }
 
 Menu& Menu::done() {
-	return *this;
+	return *parent;
 }
 
 //std:vector<SPtr>& Menu::getChildren() {

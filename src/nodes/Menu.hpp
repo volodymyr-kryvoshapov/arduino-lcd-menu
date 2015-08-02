@@ -11,11 +11,12 @@ using namespace std;
 
 class Menu: public Node, public enable_shared_from_this<Menu> {
 private:
+	std::shared_ptr<Menu> parent;
 	std::vector<SPtr> children;
 
 public:
 	Menu(const string& name);
-	Menu(const string& name, SPtr parent);
+	Menu(const string& name, std::shared_ptr<Menu> parent);
 	virtual ~Menu();
 
 	void draw();
