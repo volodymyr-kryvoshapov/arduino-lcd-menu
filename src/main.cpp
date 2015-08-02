@@ -1,9 +1,13 @@
 #include <iostream>
 #include "MenuManager.hpp"
 
+using namespace std;
+
 MenuManager menu;
 
 int main() {
+	char choice;
+
 	menu
 	.addMenu("node 1")
 		.addCustomElement("child 1.1")
@@ -34,10 +38,42 @@ int main() {
 	.addCustomElement("child 3")
 	.addCustomElement("child 4");
 
+	do {
+		menu.draw();
+
+		cin >> choice;
+		cout << "124" << endl;
+
+		switch (choice) {
+			case 'w':
+				break;
+
+			case 's':
+				break;
+
+			case 'a':
+				break;
+
+			case 'd':
+				break;
+
+			case 'q':
+				break;
+
+			case 'e':
+				break;
+
+			default:
+				cout << '\a';
+		}
+
+	} while (choice != '4');
+
 //	cout << "sizeof(menu): " << sizeof( menu.getMenu() ) << endl;
 //	cout << "sizeof(children): " << sizeof( menu.getMenu().getChildren() ) << endl;
 //	cout << "menuNodeNum: "<< menu.getMenu().getChildrenNum() << endl;
 //	cout << "menuNodeNum: "<< menu.getMenu().getChildren()[1]->getChildrenNum() << endl;
+//	splash screen
 
 	std::cout << "Hi Man! Welcome to the show!" << endl;
 

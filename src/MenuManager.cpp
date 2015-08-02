@@ -10,6 +10,6 @@ Menu& MenuManager::addMenu(const string& name) {
 	return rootMenu->addMenu(name);
 }
 
-//Menu& MenuManager::getRootMenu() {
-//	return *rootMenu;
-//}
+void MenuManager::draw() {
+	rootMenu->draw();
+}

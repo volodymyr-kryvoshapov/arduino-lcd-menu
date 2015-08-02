@@ -13,6 +13,7 @@ public:
 	virtual ~MenuManager();
 
 	Menu& addMenu(const string& name);
+	void draw();
 	//void addUsrScreen(callback, 10000);
 };
 
