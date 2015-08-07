@@ -19,7 +19,7 @@ public:
 	Menu(const string& name, std::shared_ptr<Menu> parent);
 	virtual ~Menu();
 
-	void draw();
+	void draw(std::string& pressedButton);
 
 	Menu& addMenu(const string& name); // return reference to new Menu object
 	Menu& addCustomElement(const string& name); // return reference to this object

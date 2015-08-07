@@ -7,6 +7,7 @@
 class MenuManager {
 private:
 	std::shared_ptr<Menu> rootMenu; // Menu* rootMenu;
+	std::shared_ptr<Node> currentElement;
 
 public:
 	MenuManager();

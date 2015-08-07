@@ -10,7 +10,7 @@ protected:
 public:
 	typedef std::shared_ptr<Node> SPtr;
 	virtual ~Node();
-	virtual void draw() = 0;
+	virtual void draw(std::string&);
 };
 
 #endif /* SRC_NODES_NODE_HPP_ */
