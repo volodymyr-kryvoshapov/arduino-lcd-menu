@@ -6,11 +6,20 @@
 class Node {
 protected:
 	const std::string* name;
+	int firstEnter = 1; // show initial state of element
 
 public:
 	typedef std::shared_ptr<Node> SPtr;
 	virtual ~Node();
+
+	/*
+	 * Arguments:
+	 * std::string& pressedButton
+	 *
+	 * if isMenuActive = 1 then show menu state relative of pressedButton
+	 */
 	virtual void draw(std::string&);
+	void clear();
 };
 
 #endif /* SRC_NODES_NODE_HPP_ */

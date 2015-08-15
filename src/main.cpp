@@ -1,14 +1,23 @@
 #include <iostream>
 #include "MenuManager.hpp"
 
-using namespace std;
+// DEFINE ARDUINO PINS FOR THE NAVIGATION BUTTONS
+#define UP_BUTTON_PIN       9
+#define DOWN_BUTTON_PIN     10
+#define LEFT_BUTTON_PIN     7
+#define RIGHT_BUTTON_PIN    8
+#define CONFIRM_BUTTON_PIN  12
+#define CANCEL_BUTTON_PIN   11
 
 MenuManager menu;
 
 int main() {
-	char choice;
+	std::string exit;
 
 	menu
+	.setDefaultScreen()
+	.setNavButtons(UP_BUTTON_PIN,DOWN_BUTTON_PIN,LEFT_BUTTON_PIN,RIGHT_BUTTON_PIN,CANCEL_BUTTON_PIN,CONFIRM_BUTTON_PIN)
+
 	.addMenu("node 1")
 		.addCustomElement("child 1.1")
 		.addCustomElement("child 1.2")
@@ -38,36 +47,13 @@ int main() {
 	.addCustomElement("child 3")
 	.addCustomElement("child 4");
 
+	// main loop
 	do {
 		menu.draw();
 
-		cin >> choice;
-		cout << "124" << endl;
-
-		switch (choice) {
-			case 'w':
-				break;
-
-			case 's':
-				break;
-
-			case 'a':
-				break;
-
-			case 'd':
-				break;
-
-			case 'q':
-				break;
-
-			case 'e':
-				break;
-
-			default:
-				cout << '\a';
-		}
-
-	} while (choice != '4');
+		std::cout << "exit (y/n)?: ";
+		std::cin >> exit;
+	} while (exit != "y");
 
 //	cout << "sizeof(menu): " << sizeof( menu.getMenu() ) << endl;
 //	cout << "sizeof(children): " << sizeof( menu.getMenu().getChildren() ) << endl;

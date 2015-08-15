@@ -14,7 +14,7 @@ private:
 public:
 	CustomElement();
 	virtual ~CustomElement();
-	void draw();
+	void draw(std::string& pressedButton);
 };
 
 #endif /* SRC_NODES_CUSTOMELEMENT_HPP_ */

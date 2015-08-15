@@ -12,7 +12,7 @@ Menu::~Menu() {}
 
 /*
  * case_1: enter to the menu
- *  get two first element from child array and draw it
+ *  get two first element from 'child' array and draw it
  *  draw arrow opposite first element
  *
  * case_2: buttonDown.click()
@@ -28,7 +28,28 @@ Menu::~Menu() {}
  *
  */
 void Menu::draw(std::string& pressedButton) {
+	if (firstEnter) {
+		// show initial state of menu
 
+		firstEnter = 0;
+		return;
+	}
+
+	if (pressedButton == "up") {
+
+	}
+	if (pressedButton == "down") {
+
+	}
+	if (pressedButton == "left") {
+
+	}
+	if (pressedButton == "right") {
+
+	}
+	if (pressedButton == "enter") {
+
+	}
 }
 
 Menu& Menu::addMenu(const string& name) {

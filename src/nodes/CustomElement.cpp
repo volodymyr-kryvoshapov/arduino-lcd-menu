@@ -10,6 +10,6 @@ CustomElement::~CustomElement() {
 }
 
 
-void CustomElement::draw() {
+void CustomElement::draw(std::string& pressedButton) {
 
 }
