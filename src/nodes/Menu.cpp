@@ -41,15 +41,6 @@ void Menu::draw(std::string& pressedButton) {
 	if (pressedButton == "down") {
 
 	}
-	if (pressedButton == "left") {
-
-	}
-	if (pressedButton == "right") {
-
-	}
-	if (pressedButton == "enter") {
-
-	}
 }
 
 Menu& Menu::addMenu(const string& name) {

@@ -37,13 +37,21 @@ void MenuManager::draw() {
 	 if (pressedButton == "cancel") {
 		 currentElement->clear();
 
-//		 if (currentElement->parent == NULL) {
-//			 showDefaultScreen();
-//			 return;
-//		 }
+		 //if (currentElement->done() = NULL) {
+			 //showDefaultScreen();
+			 //return;
+		 //}
 
 //		 currentElement = currentElement->parent;
 	 }
+
+	if (pressedButton == "enter") {
+		// call currentElement->enter()
+		// if we call enter function of menu element - open submenu or enter into the customElement
+		// if we call enter function of customElement - open menuManager.showApproveDialog()
+		// - if approved dialog == ok 		- call save() function of currentElement
+		// - if approved dialog == cancel 	- call currentElement->draw(pressedButton);
+	}
 
 	currentElement->draw(pressedButton);
 }

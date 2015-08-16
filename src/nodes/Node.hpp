@@ -19,7 +19,8 @@ public:
 	 * if isMenuActive = 1 then show menu state relative of pressedButton
 	 */
 	virtual void draw(std::string&);
-	void clear();
+	//virtual int hasParent();
+	virtual void clear();
 };
 
 #endif /* SRC_NODES_NODE_HPP_ */
