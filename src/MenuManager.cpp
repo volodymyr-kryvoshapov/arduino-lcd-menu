@@ -37,12 +37,12 @@ void MenuManager::draw() {
 	 if (pressedButton == "cancel") {
 		 currentElement->clear();
 
-		 //if (currentElement->done() = NULL) {
-			 //showDefaultScreen();
-			 //return;
-		 //}
+		 if (!currentElement->hasParent()) {
+			 showDefaultScreen();
+			 return;
+		 }
 
-//		 currentElement = currentElement->parent;
+		 currentElement->menuManagerSetCurrentElement();
 	 }
 
 	if (pressedButton == "enter") {
@@ -54,4 +54,8 @@ void MenuManager::draw() {
 	}
 
 	currentElement->draw(pressedButton);
+}
+
+void MenuManager::showDefaultScreen() {
+	std::cout << "show default \n screen." << std::endl;
 }

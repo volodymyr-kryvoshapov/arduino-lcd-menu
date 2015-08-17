@@ -15,6 +15,8 @@ public:
 	CustomElement();
 	virtual ~CustomElement();
 	void draw(std::string& pressedButton);
+	int hasParent();
+	void menuManagerSetCurrentElement();
 };
 
 #endif /* SRC_NODES_CUSTOMELEMENT_HPP_ */

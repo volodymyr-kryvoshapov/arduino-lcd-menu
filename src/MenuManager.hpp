@@ -8,10 +8,11 @@
 class MenuManager {
 private:
 	std::shared_ptr<Menu> rootMenu; // Menu* rootMenu;
-	std::shared_ptr<Node> currentElement;
 	long long int lastActivityTimeMs = 0;
+	void showDefaultScreen();
 
 public:
+	static std::shared_ptr<Node> currentElement;
 	MenuManager();
 	virtual ~MenuManager();
 

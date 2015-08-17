@@ -13,3 +13,11 @@ CustomElement::~CustomElement() {
 void CustomElement::draw(std::string& pressedButton) {
 
 }
+
+int CustomElement::hasParent() {
+	return 1;
+}
+
+void CustomElement::menuManagerSetCurrentElement(){
+
+}

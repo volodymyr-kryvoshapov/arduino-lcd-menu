@@ -19,7 +19,8 @@ public:
 	 * if isMenuActive = 1 then show menu state relative of pressedButton
 	 */
 	virtual void draw(std::string&);
-	//virtual int hasParent();
+	virtual int hasParent() = 0;
+	virtual void menuManagerSetCurrentElement() = 0;
 	virtual void clear();
 };
 

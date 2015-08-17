@@ -9,6 +9,8 @@
 
 using namespace std;
 
+class MenuManager;
+
 class Menu: public Node, public enable_shared_from_this<Menu> {
 private:
 	std::shared_ptr<Menu> parent;
@@ -24,6 +26,8 @@ public:
 	Menu& addMenu(const string& name); // return reference to new Menu object
 	Menu& addCustomElement(const string& name); // return reference to this object
 	Menu& done(); // return reference to parent
+	int hasParent();
+	void menuManagerSetCurrentElement();
 };
 
 #endif /* MENU_HPP_ */

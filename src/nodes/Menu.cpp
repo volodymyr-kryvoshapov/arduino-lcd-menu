@@ -58,6 +58,14 @@ Menu& Menu::done() {
 	return *parent;
 }
 
+int Menu::hasParent() {
+	return parent != NULL;
+}
+
+void Menu::menuManagerSetCurrentElement(){
+	MenuManager::currentElement = shared_from_this();
+}
+
 //std:vector<SPtr>& Menu::getChildren() {
 //	return children;
 //}

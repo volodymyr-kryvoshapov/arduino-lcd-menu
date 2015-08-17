@@ -13,7 +13,7 @@ MenuManager menu;
 
 int main() {
 	std::string exit;
-
+	MenuManager::currentElement = std::shared_ptr();
 	menu
 	.setDefaultScreen()
 	.setNavButtons(UP_BUTTON_PIN,DOWN_BUTTON_PIN,LEFT_BUTTON_PIN,RIGHT_BUTTON_PIN,CANCEL_BUTTON_PIN,CONFIRM_BUTTON_PIN)
