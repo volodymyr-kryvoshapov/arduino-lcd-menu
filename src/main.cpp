@@ -1,5 +1,5 @@
 #include <iostream>
-#include "MenuManager.hpp"
+#include "MenuController.hpp"
 
 // DEFINE ARDUINO PINS FOR THE NAVIGATION BUTTONS
 #define UP_BUTTON_PIN       9
@@ -9,11 +9,9 @@
 #define CONFIRM_BUTTON_PIN  12
 #define CANCEL_BUTTON_PIN   11
 
-MenuManager menu;
+MenuController menu;
 
 int main() {
-	std::string exit;
-	MenuManager::currentElement = std::shared_ptr();
 	menu
 	.setDefaultScreen()
 	.setNavButtons(UP_BUTTON_PIN,DOWN_BUTTON_PIN,LEFT_BUTTON_PIN,RIGHT_BUTTON_PIN,CANCEL_BUTTON_PIN,CONFIRM_BUTTON_PIN)

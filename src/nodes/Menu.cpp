@@ -23,7 +23,7 @@ Menu::~Menu() {}
  *  draw arrow opposite third element
  *
  * case_4: buttonEnter.click()
- *  MenuManager::setCurrentElement(this);
+ *  MenuController::setCurrentElement(this);
  *	call draw(std::string& pressedButton) method of derived element
  *
  */
@@ -62,8 +62,8 @@ int Menu::hasParent() {
 	return parent != NULL;
 }
 
-void Menu::menuManagerSetCurrentElement(){
-	MenuManager::currentElement = shared_from_this();
+void Menu::MenuControllerSetCurrentElement(){
+	MenuController::currentElement = shared_from_this();
 }
 
 //std:vector<SPtr>& Menu::getChildren() {

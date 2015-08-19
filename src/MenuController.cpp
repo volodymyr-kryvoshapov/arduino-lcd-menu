@@ -1,21 +1,21 @@
-#include "MenuManager.hpp"
+#include "MenuController.hpp"
 
-MenuManager::MenuManager() {
+MenuController::MenuController() {
 	std::shared_ptr<Menu> menu(new Menu("root menu")); // Menu* rootMenu = new Menu(name);
 	rootMenu = menu;
 	currentElement = rootMenu;
 }
-MenuManager::~MenuManager() {}
+MenuController::~MenuController() {}
 
-Menu& MenuManager::addMenu(const string& name) {
+Menu& MenuController::addMenu(const string& name) {
 	return rootMenu->addMenu(name);
 }
 
-MenuManager& MenuManager::setDefaultScreen() {
+MenuController& MenuController::setDefaultScreen() {
 	return *this;
 }
 
-MenuManager& MenuManager::setNavButtons(int, int, int, int, int, int) {
+MenuController& MenuController::setNavButtons(int, int, int, int, int, int) {
 	return *this;
 }
 
@@ -27,7 +27,7 @@ MenuManager& MenuManager::setNavButtons(int, int, int, int, int, int) {
  * 4. If press 'cancel' go back to parent menu or to 'defaultScreen'
  *
  */
-void MenuManager::draw() {
+void MenuController::draw() {
 	std::string pressedButton;
 
 	//in this place must be mechanism which determine which button was pressed
@@ -42,13 +42,13 @@ void MenuManager::draw() {
 			 return;
 		 }
 
-		 currentElement->menuManagerSetCurrentElement();
+		 currentElement->MenuControllerSetCurrentElement();
 	 }
 
 	if (pressedButton == "enter") {
 		// call currentElement->enter()
 		// if we call enter function of menu element - open submenu or enter into the customElement
-		// if we call enter function of customElement - open menuManager.showApproveDialog()
+		// if we call enter function of customElement - open MenuController.showApproveDialog()
 		// - if approved dialog == ok 		- call save() function of currentElement
 		// - if approved dialog == cancel 	- call currentElement->draw(pressedButton);
 	}
@@ -56,6 +56,6 @@ void MenuManager::draw() {
 	currentElement->draw(pressedButton);
 }
 
-void MenuManager::showDefaultScreen() {
+void MenuController::showDefaultScreen() {
 	std::cout << "show default \n screen." << std::endl;
 }

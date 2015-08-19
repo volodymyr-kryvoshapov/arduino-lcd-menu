@@ -9,7 +9,7 @@
 
 using namespace std;
 
-class MenuManager;
+class MenuController;
 
 class Menu: public Node, public enable_shared_from_this<Menu> {
 private:
@@ -27,7 +27,7 @@ public:
 	Menu& addCustomElement(const string& name); // return reference to this object
 	Menu& done(); // return reference to parent
 	int hasParent();
-	void menuManagerSetCurrentElement();
+	void MenuControllerSetCurrentElement();
 };
 
 #endif /* MENU_HPP_ */
